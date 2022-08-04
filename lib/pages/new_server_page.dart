@@ -87,8 +87,7 @@ class _NewServerPageState extends State<NewServerPage> {
                       hintText: 'Title',
                         counterText: _maxTitleLength.toString(),
                         filled: true,
-                        hasFloatingPlaceholder: false,
-                        fillColor: Colors.white),
+                        fillColor: Colors.white, floatingLabelBehavior: FloatingLabelBehavior.never),
                   ),
                 ),
                 Form(
@@ -107,8 +106,7 @@ class _NewServerPageState extends State<NewServerPage> {
                     decoration: InputDecoration(
                         hintText: 'Remote Address',
                         filled: true,
-                        hasFloatingPlaceholder: false,
-                        fillColor: Colors.white),
+                        fillColor: Colors.white, floatingLabelBehavior: FloatingLabelBehavior.never),
                   ),
                 ),
                 Form(
@@ -127,10 +125,9 @@ class _NewServerPageState extends State<NewServerPage> {
                     decoration: InputDecoration(
                         hintText: 'Port',
                         filled: true,
-                        hasFloatingPlaceholder: false,
-                        fillColor: Colors.white),
+                        fillColor: Colors.white, floatingLabelBehavior: FloatingLabelBehavior.never),
                       inputFormatters: [
-                        WhitelistingTextInputFormatter(RegExp("[0-9]")),
+                        FilteringTextInputFormatter.allow(RegExp("[0-9]")),
                       ],
                   ),
                 ),
@@ -150,8 +147,7 @@ class _NewServerPageState extends State<NewServerPage> {
                     decoration: InputDecoration(
                         hintText: 'Password',
                         filled: true,
-                        hasFloatingPlaceholder: false,
-                        fillColor: Colors.white),
+                        fillColor: Colors.white, floatingLabelBehavior: FloatingLabelBehavior.never),
                   ),
                 ),
               ],
